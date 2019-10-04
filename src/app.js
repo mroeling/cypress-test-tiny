@@ -9,7 +9,7 @@ const server = http.createServer((request, response) => {
 
 let path = url.parse(request.url).pathname;
 
-    if (request.method == 'POST' && path == '/blabla') {
+    if (request.method == 'POST' && path == '/testurl') {
         console.log('POST', path)
         var body = ''
         request.on('data', function(data) {
