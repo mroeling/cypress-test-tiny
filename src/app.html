@@ -1,0 +1,17 @@
+<button id="submit" onclick="return submit()">click</button>
+
+<script>
+function submit() {
+    var xhr = new XMLHttpRequest();
+    var formData = new FormData();
+    xhr.open("POST", "/testurl", true);
+
+    formData.append('_', JSON.stringify({
+            name: "John",
+            email: "john@example.com"
+        }));
+
+    xhr.send(formData);
+    return false;
+}
+</script>
